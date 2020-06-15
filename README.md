@@ -5,7 +5,7 @@ Android alpha:
 
 Top level gradle:
 
-```
+```gradle
 allprojects {
     repositories {
         google()
@@ -24,8 +24,7 @@ allprojects {
 
 
 App level gragel:
-```
-
+```gradle
 dependencies {
     implementation ('com.newlinks.intercomclient:sdk:1.0-alpha0.0'){
         transitive=true
@@ -34,8 +33,7 @@ dependencies {
 ```
 
 sample:
-```
-
+```java
 import com.newlinks.rozcomsdk.RozcomOEMCallback;
 import com.newlinks.rozcomsdk.RozcomOem;
 
