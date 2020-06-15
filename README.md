@@ -5,6 +5,7 @@ Android alpha:
 
 Top level gradle:
 
+```
 allprojects {
     repositories {
         google()
@@ -23,15 +24,18 @@ allprojects {
         }
     }
 }
+```
 
 
 App level gragel:
+```
 
 dependencies {
     implementation ('com.newlinks.intercomclient:sdk:1.0-alpha0.0'){
         transitive=true
     }
 }
+```
 
 sample:
 
