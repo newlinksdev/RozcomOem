@@ -12,7 +12,7 @@ allprojects {
         jcenter()
         mavenCentral()
         maven {
-                url = uri("https://maven.pkg.github.com/newlinksdev/RozcomOem"
+            url = uri("https://maven.pkg.github.com/newlinksdev/RozcomOem"
         }
             
         maven {
