@@ -73,6 +73,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         rozcomOem.openClient();
+
+        //rozcomOem.pushReceived();
+        //rozcomOem.getVersionCode();
+        //rozcomOem.getVersionName();
+        //rozcomOem.close();
     }
 }
 ```
