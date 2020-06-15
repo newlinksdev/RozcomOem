@@ -38,6 +38,7 @@ dependencies {
 ```
 
 sample:
+```
 
 import com.newlinks.rozcomsdk.RozcomOEMCallback;
 import com.newlinks.rozcomsdk.RozcomOem;
@@ -74,3 +75,4 @@ public class MainActivity extends AppCompatActivity {
         rozcomOem.openClient();
     }
 }
+```
