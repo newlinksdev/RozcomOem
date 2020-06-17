@@ -16,7 +16,7 @@ allprojects {
                 url = uri("https://maven.pkg.github.com/newlinksdev/RozcomOemAndroid")
                 credentials {
                     username = "nablai"
-                    password = "c76fe427b27498f947d5aa3b8be97ca5f8c26df0"// OEM
+                    password = "0c3d6d5ba247d4b949ee60ce5424c4c52bef42c8"// OEM READ
                 }
             }
             
