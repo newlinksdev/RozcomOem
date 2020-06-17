@@ -32,7 +32,7 @@ allprojects {
 App level gragel:
 ```gradle
 dependencies {
-    implementation ('com.newlinks.intercomclient:sdk:1.0-alpha0.0'){
+    implementation ('com.newlinks.intercomclient:sdk:1.0-alpha0.05'){
         transitive=true
     }
 }
