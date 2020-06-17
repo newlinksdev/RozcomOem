@@ -32,7 +32,57 @@ dependencies {
 }
 ```
 
-sample:
+sample by fragment:
+
+```
+import com.newlinks.rozcomsdk.RozcomOEMCallback;
+import com.newlinks.rozcomsdk.RozcomOem;
+
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        RozcomOem rozcomSDK = new RozcomOem(this, getSupportFragmentManager(), R.id.contentFragment, 
+        new RozcomOEMCallback() {
+            @Override
+            public void onShowProgerss() {
+
+            }
+
+            @Override
+            public void onHideProgerss() {
+
+            }
+
+            @Override
+            public void onConnected() {
+
+            }
+
+            @Override
+            public void onCallEnded() {
+
+            }
+        });
+
+        rozcomOem.openClient();
+
+        //rozcomOem.pushReceived();
+        //rozcomOem.getVersionCode();
+        //rozcomOem.getVersionName();
+        //rozcomOem.close();
+    }
+}
+
+ ```
+ 
+ 
+ 
+old method, by activity
 ```java
 import com.newlinks.rozcomsdk.RozcomOEMCallback;
 import com.newlinks.rozcomsdk.RozcomOem;
