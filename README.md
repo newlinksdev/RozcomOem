@@ -11,15 +11,21 @@ allprojects {
         google()
         jcenter()
         mavenCentral()
-        maven {
-            url = uri("https://maven.pkg.github.com/newlinksdev/RozcomOem"
-        }
+         maven {
+                name = "GitHubPackages"
+                url = uri("https://maven.pkg.github.com/newlinksdev/RozcomOemAndroid")
+                credentials {
+                    username = "nablai"
+                    password = "d633adffe58a5e042da1d2040af9b493926f4409"// OEM
+                }
+            }
             
         maven {
             url "https://github.com/QuickBlox/quickblox-android-sdk-releases/raw/master/"
         }
     }
 }
+
 ```
 
 
