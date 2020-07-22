@@ -32,7 +32,7 @@ allprojects {
 App level gragel:
 ```gradle
 dependencies {
-    implementation ('com.newlinks.intercomclient:sdk:1.0-alpha0.07'){
+    implementation ('com.newlinks.intercomclient:sdk:1.0-alpha0.08rc'){
         transitive=true
     }
 }
@@ -52,15 +52,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        RozcomOem rozcomSDK = new RozcomOem(this, getSupportFragmentManager(), R.id.contentFragment, 
-        new RozcomOEMCallback() {
+       RozcomOEMCallback rozcomOEMCallback = new RozcomOEMCallback() {
             @Override
-            public void onShowProgerss() {
+            public void onError(int i, String s) {
 
             }
 
             @Override
-            public void onHideProgerss() {
+            public void onShowProgress() {
+
+            }
+
+            @Override
+            public void onHideProgress() {
 
             }
 
@@ -73,13 +77,26 @@ public class MainActivity extends AppCompatActivity {
             public void onCallEnded() {
 
             }
-        });
 
-        rozcomOem.openClient();
+            @Override
+            public void onCallStarted() {
+
+            }
+
+            @Override
+            public void onClientClosed() {
+
+            }
+        };
+
+        RozcomOem rozcomSDFragment = new RozcomOem(this,getSupportFragmentManager(), R.id.contentFragment,rozcomOEMCallback);
+        rozcomSDFragment.openClient("05444444444");
+
+        String versionName = rozcomSDFragment.getVersionName();
+        int versionCode = rozcomSDFragment.getVersionCode();
 
         //rozcomOem.pushReceived();
-        //rozcomOem.getVersionCode();
-        //rozcomOem.getVersionName();
+   
         //rozcomOem.close();
     }
 }
